@@ -1,9 +1,7 @@
-FROM golang:latest
+FROM scratch
 
-ENV GOPROXY https://goproxy.cn,direct
-WORKDIR $GOPATH/src/github.com/troyeguo/go-gin-example
-COPY . $GOPATH/src/github.com/troyeguo/go-gin-example
-RUN go build .
+WORKDIR $GOPATH/src/github.com/EDDYCJY/go-gin-example
+COPY . $GOPATH/src/github.com/EDDYCJY/go-gin-example
 
 EXPOSE 8000
-ENTRYPOINT ["./go-gin-example"]
+CMD ["./go-gin-example"]
